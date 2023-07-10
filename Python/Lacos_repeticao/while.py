@@ -65,6 +65,54 @@ palavra = palavra.lower();
 while palavra != 'sair':
     print(palavra);
     palavra = input("Digite uma palavra ('sair' para encerrar)");
-    palavra = palavra.lower();    
+    palavra = palavra.lower();
+
+#Exemplo: Implementção de menu opções.
+
+opcao = 0;
+
+while opcao != 4:
+    print("Menu:");
+    print("1. Opção 1");
+    print("2. Opção 2");
+    print("3. Opção 3");
+    print("4. Sair");
+    
+    
+    opcao = int(input("Informe a opcao escolhida: "));
+    if opcao == 1:
+        print("Opção 1 selecionada!");
+    elif opcao == 2:
+        print("Opção 2 selecionada!");
+    elif opcao == 3:
+        print("Opção 3 selecionada!");
+    elif opcao == 4:
+        print("Saindo....");
+        break;
+    else:
+        print("Opção inválida, tente novamente");
+    
+#EMULANDO DO WHILE
+
+palavraSecret = "python";
+counter = 0;
+
+while True:
+    palavra = input("Informe a palavra secreta").lower();
+    contador += 1;
+    
+    if palavra == palavraSecret:
+        print("Você acertou a palavra secreta!");
+        break;
+    
+    if palavra != palavraSecret:
+        tentivas = 7 - contador;
+        print(f"Palavra errada! Você possui {tentivas}de um total de 7 tentativas");
+        
+    if(palavra != palavraSecret and contador > 7):
+        print("Você atingiu o limite de tentativas!");
+
+
+    
 
 
