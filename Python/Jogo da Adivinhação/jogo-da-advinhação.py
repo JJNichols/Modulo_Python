@@ -9,7 +9,7 @@ palipities_permitidos = 10;
 print("Bem vindo ao jogo de adivinhação de numeros!");
 print("");
 usariodoEntrada = input("Adivinhe um número entre 1 e " + str(palpite_intervalo) + ": ");
-adivinhação = int(usariodoEntrada);
+adivinhacao = int(usariodoEntrada);
 
 #Como mudar a dificuldade do jogo
 
@@ -76,6 +76,5 @@ for i in range(palpites_permitidos):
         print("Você é frio.");
     else:
         print("Você está congelando.");
-    
 
-    
+    print("fim do jogo!");
