@@ -11,6 +11,8 @@ print("");
 usariodoEntrada = input("Adivinhe um número entre 1 e " + str(palpite_intervalo) + ": ");
 adivinhacao = int(usariodoEntrada);
 
+
+
 #Como mudar a dificuldade do jogo
 
 print("Bem-vindo ao jogo de adivhação de números (nivel)");
