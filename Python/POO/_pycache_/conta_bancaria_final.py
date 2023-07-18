@@ -1,6 +1,7 @@
 #Solução orientada a objetos para um banco com a entidade "Conta"
 
 class Conta:
+    #Criar um metodo construtor
     def __init__(self, numero, titular, saldo = 0):
         self.numero = numero;
         self.titular = titular;
@@ -14,18 +15,18 @@ class Conta:
             self.saldo -= valor;
         else:
             print("Saldo insuficiente!");
+            self.exibir_retorno();
+            
+        def exibir_retorno(self):
+            print(f"Saldo insuficiente, você poosui {self.saldo } disponsivel para saaque");
             
     def exibir_informacoes(self):
         print(f"Conta: {self.numero}");
-        print(f"Conta: {self.titular}");
-        print(f"Conta: {self.saldo:,.2f}");
+        print(f"Titular: {self.titular}");
+        print(f"Saldo: {self.saldo:,.2f}");
         
-    #Criação de uma conta e realização de operações
-    
-    conta = Conta(123, "Jason");
-    
-    conta.depositar(1000);
-    conta.sacar(500);
-    conta.exibir_informacoes();
-    
-    
+        print(f"Saldo antes da conversão para real: {self.saldo:,.2f}");
+        valorEmReal = f'R${self.saldo:_.2f}';
+        print();
+        valorEmReal = valorEmReal.replace('.', ',').replace('_', '.');
+        print(f"Saldo: {valorEmReal}");
